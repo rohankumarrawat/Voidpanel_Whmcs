@@ -52,7 +52,7 @@ function voidpanel_APIRequest(array $params, $endpoint, $method = 'POST', array 
 {
     // Resolve Server Connection Details
     $host = $params['serverhostname'] ? $params['serverhostname'] : $params['serveripaddress'];
-    $port = $params['serverport'] ? $params['serverport'] : '8000';
+    $port = $params['serverport'] ? $params['serverport'] : '8080';
     $secure = $params['serversecure'] ? 'https' : 'http';
     $token = $params['serverpassword'] ? $params['serverpassword'] : $params['serveraccesshash'];
 
@@ -307,7 +307,7 @@ function voidpanel_ChangePackage(array $params)
 function voidpanel_ClientArea(array $params)
 {
     $host = $params['serverhostname'] ? $params['serverhostname'] : $params['serveripaddress'];
-    $port = $params['serverport'] ? $params['serverport'] : '8000';
+    $port = $params['serverport'] ? $params['serverport'] : '8080';
     $secure = $params['serversecure'] ? 'https' : 'http';
     $panelUrl = "{$secure}://{$host}:{$port}/";
 
